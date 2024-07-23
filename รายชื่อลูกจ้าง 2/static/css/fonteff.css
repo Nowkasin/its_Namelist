@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+h1:after {
+  position : relative;
+  content: "";
+  width: 100%;
+  height: 100%;
+  line-height: 48px;
+  animation: abomination1 7.5s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes abomination1 {
+  0% { content: "ยิ"; }
+  4% { content: "ยิน"; }
+  8% { content: "ยินดี"; }
+  12% { content: "ยินดีต้"; }
+  16% { content: "ยินดีต้อ"; }
+  20% { content: "ยินดีต้อน"; }
+  24% { content: "ยินดีต้อนรั"; }
+  28% { content: "ยินดีต้อนรับ"; }
+  32% { content: "ยินดีต้อนรับสู่"; }
+  36% { content: "ยินดีต้อนรับสู่ก"; }
+  40% { content: "ยินดีต้อนรับสู่กอ"; }
+  44% { content: "ยินดีต้อนรับสู่กอง"; }
+  48% { content: "ยินดีต้อนรับสู่กองง"; }
+  52% { content: "ยินดีต้อนรับสู่กองงา"; }
+  56% { content: "ยินดีต้อนรับสู่กองงาน"; }
+  60% { content: "ยินดีต้อนรับสู่กองงานผู้"; }
+  64% { content: "ยินดีต้อนรับสู่กองงานผู้ต"; }
+  68% { content: "ยินดีต้อนรับสู่กองงานผู้ตร"; }
+  72% { content: "ยินดีต้อนรับสู่กองงานผู้ตรว"; }
+  76% { content: "ยินดีต้อนรับสู่กองงานผู้ตรวจ"; }
+  80% { content: "ยินดีต้อนรับสู่กองงานผู้ตรวจร"; }
+  84% { content: "ยินดีต้อนรับสู่กองงานผู้ตรวจรา"; }
+  88% { content: "ยินดีต้อนรับสู่กองงานผู้ตรวจราช"; }
+  92% { content: "ยินดีต้อนรับสู่กองงานผู้ตรวจราชก"; }
+  96% { content: "ยินดีต้อนรับสู่กองงานผู้ตรวจราชกา"; }
+  100% { content: "ยินดีต้อนรับสู่กองงานผู้ตรวจราชการ"; }
+}

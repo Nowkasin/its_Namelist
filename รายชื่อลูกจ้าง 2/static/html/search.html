@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ค้นหารายชื่อ</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/search.css">
+    <script src="/static/js/Func.js"></script>
+    <script src="/static/js/icon.js"></script>
+    
+    <style>
+        .card {
+            max-width: 80pc;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .form-group input {
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container-justify-content-end">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">
+                        <img src="/static/images/banner.png" width="350" height="auto" alt="Banner">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    About us
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="https://webportal.bangkok.go.th/inspection/page/sub/11634/ข้อมูลผู้บริหาร" target="_blank">คณะเจ้าหน้าที่</a></li>
+                                    <li><a class="dropdown-item" href="https://webportal.bangkok.go.th/inspection/page/sub/28917/โครงสร้าง" target="_blank">โครงสร้าง</a></li>
+                                    <li><a class="dropdown-item" href="" target="_blank">คู่มือการใช้งาน</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">หน้าหลัก</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    เพิ่มข้อมูล
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/เพิ่มข้อมูลลูกจ้าง">เพิ่มข้อมูลลูกจ้าง</a></li>
+                                    <li><a class="dropdown-item" href="/เพิ่มข้อมูลข้าราชการ">เพิ่มข้อมูลข้าราชการ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ค้นหารายชื่อ">ค้นหารายชื่อ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://webportal.bangkok.go.th/inspection/contact" target="_blank">ติดต่อเรา</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item" id="login-icon" style="display: list-item; width: 80px;">
+                                <a class="nav-link" href="/Login">
+                                    <i class="bi bi-person-circle"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="icon-placeholder" style="display: none; width: 80px;">
+                                <a class="nav-link" href="/UserProfile">
+                                    <i class="bi bi-person-badge"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav class="m pt-5 ">
+                <a href="http://www.phralan.in.th/" title="พระลาน" target="_blank" class="phralan--banner">
+                    <img src="https://main.bangkok.go.th/assets/images/phralan_banner.jpg" alt="Phra Lan Banner">
+                </a>
+            </nav>
+        </div>
+    </section>
+    
+    <style>
+        .navbar .dropdown-menu {
+            position: absolute;
+        }
+    
+        .phralan--banner img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+    
+        .mt-5 {
+            margin-top: 5rem !important;
+        }
+    
+        .pt-5 {
+            padding-top: 5rem !important;
+        }
+    </style>
+    
+    <section>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img src="/static/images/กิจกรรม/กิจ1.jpg" class="d-block w-100"
+                        alt="..."></div>
+                <div class="carousel-item"><img src="/static/images/กิจกรรม/กิจ3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item"><img src="/static/images/กิจกรรม/กิจ4.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid">
+            <div class="text-center" style="margin: 20px;">
+                <h3 class="tx">ค้นหารายชื่อ</h3>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="card mb-3">
+            <div class="card-body">
+                <form id="searchForm" onsubmit="performSearch(event)">
+                    <div class="form-row tx">
+                        <div class="form-group col-md-12">
+                            <label for="searchInput"></label>
+                            <input type="text" id="searchInput" name="searchInput" onblur="formatIDCard(this)" placeholder="กรอกชื่อ หรือ เลขบัตรประชาชน" required><br><br>
+                        </div>
+                    </div>
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </div>
+        <br>
+    </section>
+    
+    
+
+    <div id="employee-details"></div>
+    <div id="govoffice-details"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <a href="/"><img src="/static/images/banner.png" alt="Banner" width="360" height="auto"
+                                style="padding-bottom: 3pc;"></a>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>กองงานผู้ตรวจราชการ สำนักปลัดกรุงเทพมหานคร</h5>
+                        <h6>ฝ่ายบริหารงานทั่วไป</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function performSearch(event) {
+            event.preventDefault();
+            const form = document.getElementById('searchForm');
+            const formData = new FormData(form);
+            const searchParams = new URLSearchParams(formData);
+
+            console.log("Sending request with data:", searchParams.toString());
+
+            try {
+                const response = await fetch('/รายละเอียด', {
+                    method: 'POST',
+                    body: searchParams
+                });
+
+                if (!response.ok) {
+                    throw new Error('Error fetching data');
+                }
+
+                const data = await response.json();
+
+                console.log("Received response data:", data);
+
+                if (data.NoData) {
+                    alert('ไม่พบข้อมูล');
+                } else if (data.IDCard && data.FullName) {
+                    if (data.Level) {
+                        // ข้อมูลเป็นของ GovOffice
+                        localStorage.setItem('govData', JSON.stringify(data));
+                        window.location.href = '/รายละเอียด/รายละเอียดเจ้าหน้าที่';
+                    } else {
+                        // ข้อมูลเป็นของ Employee
+                        localStorage.setItem('employeeData', JSON.stringify(data));
+                        window.location.href = '/รายละเอียด/รายละเอียดลูกจ้าง';
+                    }
+                }
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+
+        let alertShownIDCard = false;
+    </script>
+
+</body>
+
+</html>

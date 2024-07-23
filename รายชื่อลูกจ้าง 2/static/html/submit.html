@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Status</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Function to show a popup alert for duplicate data and redirect to the form page
+        function showDuplicateDataAlert(message, type) {
+            Swal.fire({
+                icon: 'error',
+                title: 'ข้อมูลซ้ำ',
+                text: message,
+                confirmButtonText: 'ตกลง'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    if (type === 'employee') {
+                        window.location.href = '/เพิ่มข้อมูลลูกจ้าง'; // Redirect to the form page for adding new employees
+                    } else if (type === 'gov') {
+                        window.location.href = '/เพิ่มข้อมูลข้าราชการ'; // Redirect to the form page for adding new gov employees
+                    }
+                }
+            });
+        }
+
+        // Function to show a popup alert for successful submission and redirect to the main page
+        function showSubmissionSuccessAlert() {
+            Swal.fire({
+                icon: 'success',
+                title: 'บันทึกข้อมูลแล้ว',
+                text: 'ข้อมูลของคุณได้รับการบันทึกเรียบร้อยแล้ว',
+                confirmButtonText: 'ตกลง'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/'; // Redirect to the main page or another page as desired
+                }
+            });
+        }
+
+        // Check if showDuplicateDataAlert() or showSubmissionSuccessAlert() should be called based on URL parameters
+        document.addEventListener('DOMContentLoaded', function() {
+            let urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('error')) {
+                let errorMessage = decodeURIComponent(urlParams.get('error'));
+                let errorType = decodeURIComponent(urlParams.get('type'));
+                showDuplicateDataAlert(errorMessage, errorType);
+            }
+
+            if (urlParams.has('success')) {
+                showSubmissionSuccessAlert();
+            }
+        });
+    </script>
+</body>
+</html>

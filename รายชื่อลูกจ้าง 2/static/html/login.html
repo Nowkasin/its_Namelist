@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียน</title>
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <script src="/static/js/login.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.1/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+        .arrow-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        .text-danger {
+            color: #dc3545;
+            font-size: 0.9em;
+        }
+    </style>
+
+    <a href="/"><i class="bi bi-arrow-left-short arrow-left"></i></a>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="/register" method="POST" id="signUpForm">
+                <img src="/static/images/กทม.png" class="mb-3" style="width: 100px;" alt="Logo">
+                <h1>Create Account</h1>
+                <span>or use your email for registration</span>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="นาย ทดสอบ สอบวินัย" name="nameuser" required />
+                    <div id="prefix-error" class="text-danger"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" class="form-control" placeholder="Email" name="Email" required />
+                    <div id="email-error" class="text-danger"></div>
+                    <div id="server-error" class="text-danger"></div>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" class="form-control" placeholder="Password" name="pass" required />
+                    <div id="password-error" class="text-danger"></div>
+                </div>                
+                <div class="form-group">
+                    <select class="form-control d" id="position" name="position" required>
+                        <option value="" disabled selected hidden>ตำแหน่ง</option>
+                        <option value="เจ้าหน้าที่">เจ้าหน้าที่</option>
+                        <option value="หัวหน้าฝ่าย">หัวหน้าฝ่าย</option>
+                    </select>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="/login" method="POST" id="signInForm">
+                <img src="/static/images/กทม.png" class="mb-3" style="width: 100px;" alt="Logo">
+                <h1>Sign in</h1>
+                <span>or use your account</span>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="นาย ทดสอบ สอบวินัย" name="nameuser" required />
+                    <div id="prefix-error-signin" class="text-danger"></div>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password-signin" class="form-control" placeholder="Password" name="pass" required />
+                    <div id="password-error-signin" class="text-danger"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                <a href="#" class="d-block mt-3">Forgot your password?</a>
+                <div id="server-error-signin" class="text-danger"></div>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost btn btn-outline-light" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost btn btn-outline-light" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

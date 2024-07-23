@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กองงานผู้ตรวจราชการ</title>
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/move.css">
+    <link rel="stylesheet" href="/static/css/fonteff.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <script src="/static/js/icon.js"></script>
+</head>
+
+<body>
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+    <section>
+        <div class="container-justify-content-end">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">
+                        <img src="/static/images/banner.png" width="350" height="auto" alt="Banner">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    About us
+                                </a>
+                                <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item"
+                                            href="https://webportal.bangkok.go.th/inspection/page/sub/11634/ข้อมูลผู้บริหาร"
+                                            target="_blank">คณะเจ้าหน้าที่</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="https://webportal.bangkok.go.th/inspection/page/sub/28917/โครงสร้าง"
+                                            target="_blank">โครงสร้าง</a></li>
+                                    <li><a class="dropdown-item" href="" target="_blank">คู่มือการใช้งาน</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">หน้าหลัก</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    เพิ่มข้อมูล
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/เพิ่มข้อมูลลูกจ้าง"
+                                            target="_blank">เพิ่มข้อมูลลูกจ้าง</a></li>
+                                    <li><a class="dropdown-item" href="/เพิ่มข้อมูลข้าราชการ"
+                                            target="_blank">เพิ่มข้อมูลข้าราชการ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ค้นหารายชื่อ" target="_blank">ค้นหารายชื่อ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://webportal.bangkok.go.th/inspection/contact"
+                                    target="_blank">ติดต่อเรา</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item" id="login-icon" style="display: list-item; width: 80px;">
+                                <a class="nav-link" href="/Login">
+                                    <i class="bi bi-person-circle"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="icon-placeholder" style="display: none; width: 80px;">
+                                <a class="nav-link" href="/UserProfile">
+                                    <i class="bi bi-person-badge"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav class="m pt-5 ">
+                <a href="http://www.phralan.in.th/" title="พระลาน" target="_blank" class="phralan--banner">
+                    <img src="https://main.bangkok.go.th/assets/images/phralan_banner.jpg" alt="Phra Lan Banner">
+                </a>
+            </nav>
+        </div>
+    </section>
+
+    <style>
+        .navbar .dropdown-menu {
+            position: absolute;
+        }
+
+        .phralan--banner img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .mt-5 {
+            margin-top: 5rem !important;
+        }
+
+        .pt-5 {
+            padding-top: 5rem !important;
+        }
+    </style>
+
+    <section>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/images/กิจกรรม/กิจ1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/กิจกรรม/กิจ3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/กิจกรรม/กิจ4.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <br>
+    <section>
+        <div class="container-fluid">
+            <h1 class="fn"></h1>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row card-row">
+                <div class="col-lg-4">
+                    <div class="card anicard" style="width: auto;">
+                        <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/448880602_801146775526807_6604391228446321522_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFQ408l5V7yqYGU62d2vOWM85qqMo4SXerzmqoyjhJd6r6nGX2Xr3tupFXYAKcP7q9p0nkKLsQAl41FmwVhfgXw&_nc_ohc=pMz4T0r7p2MQ7kNvgEVznbL&_nc_ht=scontent.fbkk28-1.fna&oh=00_AYAiVD9OHXItxwJkOL3Hl16XQjTm2p4sqAwi_TpllYnV5Q&oe=66A2E100"
+                            class="card-img-top" alt="Anti-Drug Day">
+                        <div class="card-body">
+                            <h5 class="card-title"><a
+                                    href="https://www.facebook.com/permalink.php?story_fbid=pfbid02bAnWX1P9ErCycCjmjGJiJNXrPnT4MqiEoW8mHHCQ6prvMBWvwLbVEuFa1DWK9cP1l&id=100043946373123"
+                                    target="_blank">วันต่อต้านยาเสพติดโลก</a></h5>
+                            <p class="card-text">กทม. ร่วมกิจกรรมวันต่อต้านยาเสพติดโลก ปลุกพลังใจ
+                                ต้านภัยยาเสพติดด้วยเสียงเพลง
+                                (22 มิ.ย. 67) เวลา 17.00 น. พญ.วันทนีย์ วัฒนะ ปลัดกรุงเทพมหานคร
+                                ร่วมเป็นเกียรติในกิจกรรมคอนเสิร์ตวันต่อต้านยาเสพติดโลก (26 มิถุนายน) ประจำปี 2567
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card anicard" style="height: 454px;">
+                        <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/448203235_794272072880944_629737688192467613_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHk2JFeE0oOx-8Y3-Au1dVr1XfEqc2gagXVd8SpzaBqBfqwuCTDTicD7OtleuTQGiinb97rs_yU76eEByyveitY&_nc_ohc=73f3MSu2jmEQ7kNvgGA7q0d&_nc_ht=scontent.fbkk28-1.fna&oh=00_AYCeVuj8Mct5Bk77kvfW0oCr6LGClfZlK8PjtPTwUcJBOw&oe=66A2E210"
+                            alt="">
+                        <div class="card-body">
+                            <h5 class="card-title"><a
+                                    href="https://www.facebook.com/permalink.php?story_fbid=pfbid0WbxC7zgwDH553cQAYf6Ugvu7eop4YhgWN4YtRfw7sREjd4mMHiJEreA6uq62LWbPl&id=100043946373123"
+                                    target="_blank">กรุงเทพมหานครและมหาวิทยาลัยนวมินทราธิราช ร่วมลงนามบันทึกข้อตกลง
+                                    (MOU)</a></h5>
+                            <p class="card-text">กรุงเทพมหานครและมหาวิทยาลัยนวมินทราธิราช ร่วมลงนามบันทึกข้อตกลง (MOU)
+                                ว่าด้วยความร่วมมือโครงการผลิตกำลังคน (Manpower) สมรรถนะสูงของกรุงเทพมหานคร </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" style="padding-bottom: 10px;">
+                    <div class="card anicard">
+                        <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/449449657_806778444963640_1519034692035972377_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFoiiXRt1zdygHmxg-0A74s6LBTtUCJRYfosFO1QIlFh97MTfwsKMp7cCWwKp9R-hXJRXJQqt7s2oD6ey7sARKH&_nc_ohc=lDAofP12XHUQ7kNvgGX42aV&_nc_ht=scontent.fbkk28-1.fna&oh=00_AYB7qGzIsVMwkQDh2qVeGEzBR0OFlmEcVHp0gtcrjQc-Kw&oe=66A2CDBA"
+                            alt="">
+                        <div class="card-body">
+                            <h5 class="card-title"><a
+                                    href="https://www.facebook.com/permalink.php?story_fbid=pfbid0QsQcv7AJAjtK8s1bHzNSkktYVh5DzxMhR6qr8v9dr6RJCvStHTZyf5kpfomQX7xyl&id=100043946373123"
+                                    target="_blank">LOVE PRIDE PARADE 2024 </a></h5>
+                            <p class="card-text">(30 มิ.ย.67) เวลา 16.00 น. นายชัชชาติ สิทธิพันธุ์
+                                ผู้ว่าราชการกรุงเทพมหานคร นำคณะผู้บริหารกรุงเทพมหานคร ร่วมพิธีเปิดงาน " WORLD PRIDE
+                                PARADE 2024 " และร่วมขบวน LOVE PRIDE PARADE 2024...THE FIRST EVER LONGEST PARADE IN ASIA
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row card-row" style="padding-top: 20px;">
+                <div class="col-lg-4">
+                    <div class="card anicard">
+                        <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/450227527_1013933510081519_8559269505270728008_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGJ2bUk5u7xcksBp9TsHfP1djvTfYqnc3N2O9N9iqdzc4nJBKnAUd0v0hdL_XnH76hdCnwzkR5pg-Up3ddE5Q7B&_nc_ohc=z7iRw8yGnLYQ7kNvgFlgz5x&_nc_ht=scontent.fbkk28-1.fna&oh=00_AYDhBTXPb71IJ5VI27ZFlu2lmfnb1XxN9ymGGENyfoIULg&oe=66A2F6C2"
+                            alt="">
+                        <div class="card-body">
+                            <h5 class="card-title"><a
+                                    href="https://www.facebook.com/permalink.php?story_fbid=pfbid0CV8emvdUSfKX327c2SgGT6bkKqkGVKK4oapshLP8FsHKGQYKFVaEGCgvYCBndueLl&id=100043946373123"
+                                    target="_blank">กิจกรรมเทิดพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัว เนื่องในโอกาสมหามงคล
+                                    เฉลิมพระชนมพรรษา ๖ รอบ ๒๘ กรกฎาคม ๒๕๖๗</a></h5>
+                            <p class="card-text">ผู้อำนวยการกองงานผู้ตรวจราชการ นำข้าราชการและบุคลากร
+                                กองงานผู้ตรวจราชการ
+                                จัดกิจกรรมเฉลิมพระเกียรติพระบาทสมเด็จพระเจ้าอยู่หัวเนื่องในโอกาสมหามงคล เฉลิมพระชนมพรรษา
+                                ๖ รอบ
+                                ๒๘ กรกฎาคม ๒๕๖๗ และกิจกรรมส่งเสริมคุณธรรม 2567</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card anicard" style="height: 788px;">
+                        <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/450451727_1013923946749142_6788252364319227732_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEktJzZtIOyufSfgZDsdWDtIPF_mjvkZtMg8X-aO-Rm0wyMuqcA6thuwKIoDON9HibEUI6jGd0uhIRD0voUzxG7&_nc_ohc=Xlxy2KV24HIQ7kNvgHgMFlH&_nc_ht=scontent.fbkk28-1.fna&oh=00_AYDTcPR49AvOK5XB3eWVUGryCEsx5fJ6USWFs6t-d4VoAw&oe=66A2E6DC"
+                            alt="">
+                        <div class="card-body">
+                            <h5 class="card-title"><a
+                                    href="https://www.facebook.com/permalink.php?story_fbid=pfbid02c6WxHxMMqNCrZqDaaxFuuTqeiX9yh3QMteFRz48yxHiQEojXGnkksvtX9yvyetVLl&id=100043946373123"
+                                    target="_blank">การประชุมหารือการจัดทำแบบตรวจมาตรฐานทางเท้าในจุดผ่อนผัน </a></h5>
+                            <p class="card-text">วันที่ 5 กรกฎาคม 2567 เวลา 09.30 น.
+                                คณะผู้ตรวจราชการต้นและผู้ช่วยผู้ตรวจราชการ สำนักปลัดกรุงเทพมหานคร
+                                ประชุมหารือการจัดทำแบบตรวจมาตรฐานทางเท้าของหาบเร่แผงลอย
+                                ในจุดผ่อนผัน </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card anicard" style="height: 788px;">
+                        <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/450317241_1013349453473258_7143410922900383256_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFoEqlB7OCmY75BTSugZ0ZPLDlUGy4QwfUsOVQbLhDB9aJ0-Ujj7Kis62RYv90JPpDgda2wSP3O9Tq8xDeVke04&_nc_ohc=n8hAIaVJNN8Q7kNvgGEthPC&_nc_ht=scontent.fbkk28-1.fna&oh=00_AYDmXMCDatqstvQCwYPOm2pAyxJvs9iT_ijb_PR7W-IR_g&oe=66A2DE01"
+                            alt="">
+                        <div class="card-body">
+                            <h5 class="card-title"><a
+                                    href="https://www.facebook.com/permalink.php?story_fbid=pfbid037VBHvdecbWt4Sv94Uix3pUnFNKe1knQk33ejRbwy4kwJaqMsMRBvUy1PFDSr3eifl&id=100043946373123">เรื่องประชุมกองงานผู้ตรวจราชการ
+                                    ครั้งที่ 8/2567</a></h5>
+                            <p class="card-text"> ผู้อำนวยการกองงานผู้ตรวจราชการ ข้าราชการและบุคลากรกองงาน
+                                ผู้ตรวจราชการ ประชุมหารือข้อราชการ ติดตามผลการดำเนินงาน และ
+                                ความก้าวหน้าของตัวชี้วัดปี 2567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </section>
+
+    <br>
+    <br>
+
+    <section>
+        <div class="container-fluid p-0">
+            <div class="scrolling-carousel-container">
+                <div class="scrolling-carousel">
+                    <a href="https://dds.bangkok.go.th/public_content/files/001/0004901_1.pdf" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-30_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 1" /></a>
+                    <a href="https://weather.bangkok.go.th/radar/RadarNongkam.aspx" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-38_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 2" /></a>
+                    <a href="https://airquality.airbkk.com/PublicWebClient/#/Modules/Aqs/HomePage" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-29_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 3" /></a>
+                    <a href="https://cctv.bangkok.go.th" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-2-03_0.jpg "
+                            style="width: 280px; border-radius: 5%;" alt="Image 4" /></a>
+                    <a href="http://www.bmatraffic.com/index.aspx" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-2-04_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 5" /></a>
+                    <a href="http://203.155.220.174/MobileToilet/index.php" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-2-02_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 6" /></a>
+                    <a href="https://main.bangkok.go.th/Page/69/%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3"
+                        target="_blank"><img src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-2-01_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 7" /></a>
+                    <!-- Repeat the images for looping effect -->
+                    <a href="https://dds.bangkok.go.th/public_content/files/001/0004901_1.pdf" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-30_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 1" /></a>
+                    <a href="https://weather.bangkok.go.th/radar/RadarNongkam.aspx" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-38_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 2" /></a>
+                    <a href="https://airquality.airbkk.com/PublicWebClient/#/Modules/Aqs/HomePage" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-29_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 3" /></a>
+                    <a href="https://cctv.bangkok.go.th" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-2-03_0.jpg "
+                            style="width: 280px; border-radius: 5%;" alt="Image 4" /></a>
+                    <a href="http://www.bmatraffic.com/index.aspx" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-2-04_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 5" /></a>
+                    <a href="http://203.155.220.174/MobileToilet/index.php" target="_blank"><img
+                            src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-2-02_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 6" /></a>
+                    <a href="https://main.bangkok.go.th/Page/69/%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3"
+                        target="_blank"><img src="https://pr-bangkok.com/wp-content/uploads/2024/03/Web-menu-2-01_0.jpg"
+                            style="width: 280px; border-radius: 5%;" alt="Image 7" /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var carousel = document.querySelector('#myCarousel');
+            var carouselInstance = new bootstrap.Carousel(carousel, {
+                interval: 2000,
+                wrap: true
+            });
+        });
+    </script>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <a href="/"><img src="/static/images/banner.png" alt="Banner" width="360" height="auto"
+                                style="padding-bottom: 3pc;"></a>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>กองงานผู้ตรวจราชการ สำนักปลัดกรุงเทพมหานคร</h5>
+                        <h6>ฝ่ายบริหารงานทั่วไป</h6>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        //Func สำหรับกดแล้วไปบนสุด
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        const navEl = document.querySelector('.navbar');
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 56) {
+                navEl.classList.add('navbar-scrolled');
+            } else if (window.scrollY < 56) {
+                navEl.classList.remove('navbar-scrolled')
+            }
+
+            // Show or hide the scroll to top button
+            if (window.scrollY > 200) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+    </script>
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const rows = document.querySelectorAll(".card-row");
+
+            function checkVisibility() {
+                rows.forEach((row, rowIndex) => {
+                    const rect = row.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                        const cards = row.querySelectorAll(".anicard");
+                        cards.forEach((card, cardIndex) => {
+                            setTimeout(() => {
+                                card.classList.add("visible");
+                            }, cardIndex * 500);
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkVisibility);
+            checkVisibility(); // Initial check
+        });
+    </script>
+</body>
+
+</html>

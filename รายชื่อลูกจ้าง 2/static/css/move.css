@@ -1,0 +1,30 @@
+.scrolling-carousel-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+  }
+
+  .scrolling-carousel {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+  }
+
+  .scrolling-carousel img {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    margin: 0 5px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  
